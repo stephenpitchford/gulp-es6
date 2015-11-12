@@ -1,0 +1,12 @@
+/dist/
+node_modules/
+npm-debug.log
+bower_components/
+.DS_Store
+/.tmp/
+
+/misc/
+*.sublime-workspace
+*.sublime-project
+
+.tern-project
