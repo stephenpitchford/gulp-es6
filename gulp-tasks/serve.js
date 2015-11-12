@@ -10,7 +10,6 @@ const dirs = {
 
 const dev = [dirs.src, dirs.tmp];
 
-console.log(config);
 export default gulp.task('serve', () => {
 
   connect.server({
