@@ -1,16 +1,10 @@
 import gulp from 'gulp';
-import * as connect from 'gulp-connect';
-import {config} from './config';
+import connect from 'gulp-connect';
+import config from './config';
 
-const dirs = {
-  tmp: '.tmp',
-  src: 'src',
-  dist: 'dist'
-};
+const dev = [config.app.base, config.tmp.base];
 
-const dev = [dirs.src, dirs.tmp];
-
-export default gulp.task('serve', () => {
+export default gulp.task('serve', ['styles', 'styles:watch', 'express'], () => {
 
   connect.server({
     root: dev,
@@ -21,3 +15,5 @@ export default gulp.task('serve', () => {
   });
 
 });
+
+export {connect};
