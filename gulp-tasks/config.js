@@ -5,14 +5,16 @@ const dirs = {
   server: 'lib/',
 
   styles: 'styles/',
-  images: 'images/'
+  images: 'images/',
+  components: 'components/'
 };
 
 const config = {
   app: {
     base: dirs.app,
     styles: `${dirs.app}${dirs.styles}`,
-    images: `${dirs.app}${dirs.images}`
+    images: `${dirs.app}${dirs.images}`,
+    components: `${dirs.app}${dirs.components}`
   },
   tmp: {
     base: dirs.tmp,
