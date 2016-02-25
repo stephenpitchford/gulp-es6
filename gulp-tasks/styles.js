@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
+import watch from 'gulp-watch';
 
 import config from './config';
 import {connect} from './serve';
@@ -15,5 +16,7 @@ export default gulp.task('styles', () => {
 });
 
 gulp.task('styles:watch', function () {
-  gulp.watch(`${config.app.base}**/*.scss`, ['styles']);
+  watch(`${config.app.base}**/*.scss`, function() {
+    gulp.start('styles');
+  });
 });
